@@ -39,8 +39,11 @@ public class Program {
 
             String error = reservation.updateDates(checkIn, checkOut);
 
-            System.out.println(reservation);
-
+            if (error != null) {
+                System.out.println("Error in reservation: " + error);
+            } else {
+                System.out.println(reservation);
+            }
         }
 
         sc.close();

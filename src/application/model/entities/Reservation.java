@@ -28,7 +28,7 @@ public class Reservation {
         if (checkIn.before(now) || checkOut.before(now)) {
             return "Error in reservation: Reservation dates for update must be future dates";
         } else if (!checkOut.after(checkIn)) {
-            return "Enter data to update the reservation (dd/MM/yyyy): ";
+            return "Check-out date must be after check-in date: ";
         }
         this.checkIn = checkIn;
         this.checkOut = checkOut;
